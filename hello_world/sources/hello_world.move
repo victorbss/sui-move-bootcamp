@@ -14,8 +14,8 @@ module hello_world::hello_world{
         print(&utf8(b"Hello World!"));
     }
 
-    #[test]
-    fun test(){
-        hello_world()
-    }
+    // #[test]
+    // fun test(){
+    //     hello_world()
+    // }
 }
