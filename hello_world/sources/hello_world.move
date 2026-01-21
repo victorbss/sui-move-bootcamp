@@ -14,6 +14,11 @@ module hello_world::hello_world{
         print(&utf8(b"Hello World!"));
     }
 
+    // func never called. remove it
+    fun test_func(){
+        print(&utf8(b"test func call"));
+    }
+
     #[test]
     fun test(){
         hello_world()
