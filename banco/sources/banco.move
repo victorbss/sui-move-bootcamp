@@ -49,4 +49,9 @@ module banco::conta {
         consultar_saldo(&meu_saldo);
     }
 
+    #[test]
+    fun teste_banco() {
+        simular_conta_bancaria();
+    }
+
 }
