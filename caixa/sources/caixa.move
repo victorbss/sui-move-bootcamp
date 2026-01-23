@@ -26,4 +26,9 @@ module caixa::calculadora {
         }
     }
 
+    fun aplicar_desconto(valor: &mut u64, percentual_desconto: u64) {
+        let desconto = (*valor * percentual_desconto) / 100;
+        *valor = *valor - desconto;
+    }
+
 }
