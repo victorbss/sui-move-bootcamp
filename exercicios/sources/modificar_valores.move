@@ -11,5 +11,9 @@ module exercicios::modificar_valores {
         contador = contador + 5;
         print(&contador); 
     }
-    
+
+    #[test]
+    fun teste_contador() {
+        contador_simples();
+    }
 }
