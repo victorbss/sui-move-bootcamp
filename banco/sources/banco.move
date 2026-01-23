@@ -21,4 +21,15 @@ module banco::conta {
         *saldo = *saldo + valor;
     }
 
+    fun sacar(saldo: &mut u64, valor: u64) {
+        print(&utf8(b"Sacando:"));
+        print(&valor);
+        if (*saldo >= valor) {
+            *saldo = *saldo - valor;
+            print(&utf8(b"Saque realizado"));
+        } else {
+            print(&utf8(b"Saldo insuficiente"));
+        }
+    }
+
 }
