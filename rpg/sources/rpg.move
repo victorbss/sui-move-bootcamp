@@ -13,4 +13,13 @@ module rpg::inventario {
             print(&utf8(b"Inventario cheio! Nao foi possivel adicionar"));
         }
     }
+
+    fun usar_item(quantidade_atual: &mut u64, itens_usados: u64) {
+        if (*quantidade_atual >= itens_usados) {
+            *quantidade_atual = *quantidade_atual - itens_usados;
+            print(&utf8(b"Itens usados"));
+        } else {
+            print(&utf8(b"Nao ha itens suficientes"));
+        }
+    }
 }
