@@ -66,4 +66,9 @@ module caixa::calculadora {
         print(&preco);
     }
 
+    #[test]
+    fun teste_matematica() {
+        teste_calculadora();
+    }
+
 }
