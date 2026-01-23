@@ -32,4 +32,21 @@ module banco::conta {
         }
     }
 
+    fun simular_conta_bancaria() {
+        let mut meu_saldo = 1000; 
+        
+        print(&utf8(b"=== CONTA BANCARIA ==="));
+        
+        consultar_saldo(&meu_saldo);
+        
+        depositar(&mut meu_saldo, 500); 
+        consultar_saldo(&meu_saldo);
+        
+        sacar(&mut meu_saldo, 300); 
+        consultar_saldo(&meu_saldo);
+        
+        sacar(&mut meu_saldo, 2000); 
+        consultar_saldo(&meu_saldo);
+    }
+
 }
