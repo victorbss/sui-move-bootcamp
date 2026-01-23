@@ -31,7 +31,7 @@ module caixa::calculadora {
         *valor = *valor - desconto;
     }
 
-    fun teste_calculadora() {
+    fun calculadora() {
         let numero1 = 20;
         let numero2 = 5;
         
@@ -67,8 +67,8 @@ module caixa::calculadora {
     }
 
     #[test]
-    fun teste_matematica() {
-        teste_calculadora();
+    fun teste_calculadora() {
+        calculadora();
     }
 
 }
