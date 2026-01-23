@@ -20,5 +20,10 @@ module exercicios::referencias_basicas {
         dobrar_numero(&mut z);
         print(&z); 
     }
+
+     #[test]
+    fun teste_referencias() {
+        praticar_referencias();
+    }
     
 }
