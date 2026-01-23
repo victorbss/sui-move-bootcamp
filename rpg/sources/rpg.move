@@ -64,4 +64,9 @@ module rpg::inventario {
         
         verificar_inventario(&pocoes, &espadas, &escudos);
     }
+
+    #[test]
+    fun teste_inventario() {
+        simular_inventario();
+    }
 }
