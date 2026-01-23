@@ -9,5 +9,21 @@ module exercicios::referencias_basicas {
         *numero = *numero * 2;
     }
     
+    fun praticar_referencias() {
+        let x = 10;
+        let y = 20;
+        
+        let soma = somar_com_referencia(&x, &y);
+        print(&soma); 
+        
+        let mut z = 5;
+        dobrar_numero(&mut z);
+        print(&z); 
+    }
+
+     #[test]
+    fun teste_referencias() {
+        praticar_referencias();
+    }
     
 }
