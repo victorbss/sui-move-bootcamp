@@ -36,7 +36,12 @@ module rpg::inventario {
         print(&utf8(b"Total de itens:"));
         print(&total_itens);
         
-        let espacos_livres = LIMITE_ITENS - total_itens;
+        let espacos_livres: u64;
+        if (total_itens <= LIMITE_ITENS) {
+            espacos_livres = LIMITE_ITENS - total_itens;
+        } else {
+            espacos_livres = 0;
+        };
         print(&utf8(b"Espacos livres:"));
         print(&espacos_livres);
     }
