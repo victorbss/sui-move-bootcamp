@@ -15,4 +15,10 @@ module banco::conta {
         print(saldo);
     }
 
+    fun depositar(saldo: &mut u64, valor: u64) {
+        print(&utf8(b"Depositando:"));
+        print(&valor);
+        *saldo = *saldo + valor;
+    }
+
 }
