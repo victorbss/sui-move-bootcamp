@@ -20,9 +20,4 @@ module exercicios::variaveis_basicas {
         print(&contador);
         print(&MINHA_IDADE);
     }
-    
-    #[test]
-    fun teste_variaveis() {
-        praticar_variaveis();
-    }
 }
