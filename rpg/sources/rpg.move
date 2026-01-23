@@ -40,4 +40,28 @@ module rpg::inventario {
         print(&utf8(b"Espacos livres:"));
         print(&espacos_livres);
     }
+
+    fun simular_inventario() {
+        let mut pocoes = 3;
+        let mut espadas = 1;
+        let mut escudos = 0;
+        
+        verificar_inventario(&pocoes, &espadas, &escudos);
+        
+        print(&utf8(b"Encontrou 2 pocoes"));
+        adicionar_item(&mut pocoes, 2);
+        
+        print(&utf8(b"Comprou 1 escudo"));
+        adicionar_item(&mut escudos, 1);
+        
+        print(&utf8(b"Usou 1 pocao"));
+        usar_item(&mut pocoes, 1);
+        
+        verificar_inventario(&pocoes, &espadas, &escudos);
+        
+        print(&utf8(b"Tentando adicionar 8 espadas"));
+        adicionar_item(&mut espadas, 8);
+        
+        verificar_inventario(&pocoes, &espadas, &escudos);
+    }
 }
