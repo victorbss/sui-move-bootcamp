@@ -22,4 +22,22 @@ module rpg::inventario {
             print(&utf8(b"Nao ha itens suficientes"));
         }
     }
+
+    fun verificar_inventario(pocoes: &u64, espadas: &u64, escudos: &u64) {
+        print(&utf8(b"=== INVENTARIO ==="));
+        print(&utf8(b"Pocoes:"));
+        print(pocoes);
+        print(&utf8(b"Espadas:"));
+        print(espadas);
+        print(&utf8(b"Escudos:"));
+        print(escudos);
+        
+        let total_itens = *pocoes + *espadas + *escudos;
+        print(&utf8(b"Total de itens:"));
+        print(&total_itens);
+        
+        let espacos_livres = LIMITE_ITENS - total_itens;
+        print(&utf8(b"Espacos livres:"));
+        print(&espacos_livres);
+    }
 }
