@@ -24,4 +24,9 @@ module loja::produtos {
         print(&utf8(b"Total:"));
         print(&total);              
     }
+
+    #[test]
+    fun teste_loja() {
+        calcular_total_compra();
+    }
 }
